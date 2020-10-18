@@ -25,7 +25,7 @@ client.on("messageCreate", async function(message){
         if (message.author.id !== '755580145078632508') return;
 
         // Check if it's within one of the targetted servers
-        if (config.targetServer.indexOf(message.guildID) === -1) return;
+        if (config.targetServers.indexOf(message.guildID) === -1) return;
 
         // Checking if we have the correct message
         var stoppedBy = true;
