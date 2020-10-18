@@ -14,7 +14,7 @@ async function sleep(ms){
 
 // On ready
 client.once("connect", () => {
-    console.log('Ready!');
+    console.log(`[+] Sniper is up! (${new Date()})`);
 });
 
 // On Message
@@ -46,6 +46,8 @@ client.on("messageCreate", async function(message){
         } else {
             client.createMessage(message.channel.id, "h!treat");
         };
+
+        console.log(`[+] Sniped! (${new Date()})`)
 
         // Return
         return trick;
