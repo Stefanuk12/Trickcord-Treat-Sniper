@@ -9,7 +9,7 @@ const client = new Eris(config.LoginToken);
 async function sleep(ms){
     return new Promise((resolve) => {
         setTimeout(resolve, ms);
-    })
+    });
 };
 
 // On ready
