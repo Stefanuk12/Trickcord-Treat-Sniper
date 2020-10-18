@@ -14,7 +14,7 @@ async function sleep(ms){
 
 // On ready
 client.once("connect", () => {
-    console.log(`[+] Sniper is up! (${new Date()})`);
+    console.log(`[+] Sniper is up | ${new Date()}`);
 });
 
 // On Message

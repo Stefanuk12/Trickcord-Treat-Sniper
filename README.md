@@ -1,5 +1,5 @@
 # Trick'cord Treat Sniper
-A sniper self-bot for Trick'cord Treat Sniper
+A sniper self-bot for Trick'cord Treat Sniper. Please note that you may get banned and if you do, I am not responsible.
 
 # Description
 It correctly says h!treat or h!trick in the targetted servers
