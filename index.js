@@ -47,7 +47,7 @@ client.on("messageCreate", async function(message){
             client.createMessage(message.channel.id, "h!treat");
         };
 
-        console.log(`[+] Sniped! (${new Date()})`)
+        console.log(`[+] Sniped | Server: ${message.guildID} | ${new Date()}`)
 
         // Return
         return trick;
