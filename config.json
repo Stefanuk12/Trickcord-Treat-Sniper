@@ -1,0 +1,8 @@
+{
+    "LoginToken": "token",
+    "targetServer": ["23123213", "4343434343", "1243535"],
+    "SleepTimer": {
+        "min": 1000,
+        "max": 1750
+    }
+}
