@@ -21,8 +21,17 @@ client.once("connect", () => {
 client.on("messageCreate", async function(message){
     // try/catch to remove the warnings from console
     try {
-        // Check if it's a message from the bot and within the target server
-        if (message.author.id !== '755580145078632508' && config.targetServer.find(element => element === message.guildID) === undefined) return;
+        // Check if it's a message from the bot
+        if (message.author.id !== '755580145078632508') return;
+
+        // Check if it's within one of the selected servers
+        var isTargeted = false;
+        config.targetServers.forEach((guildId) => {
+            if (guildId === message.guildID){
+                isTargeted = true;
+            };
+        });
+        if (isTargeted === false) return;
 
         // Checking if we have the correct message
         var stoppedBy = true;
