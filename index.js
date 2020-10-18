@@ -24,14 +24,8 @@ client.on("messageCreate", async function(message){
         // Check if it's a message from the bot
         if (message.author.id !== '755580145078632508') return;
 
-        // Check if it's within one of the selected servers
-        var isTargeted = false;
-        config.targetServers.forEach((guildId) => {
-            if (guildId === message.guildID){
-                isTargeted = true;
-            };
-        });
-        if (isTargeted === false) return;
+        // Check if it's within one of the targetted servers
+        if (config.targetServer.indexOf(message.guildID) === -1) return;
 
         // Checking if we have the correct message
         var stoppedBy = true;
