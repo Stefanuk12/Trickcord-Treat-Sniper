@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Stefanuk12/Trick-cord-Treat-Sniper/issues"
   },
-  "homepage": "https://github.com/Stefanuk12/Trick-cord-Treat-Sniper#readme"
+  "homepage": "https://github.com/Stefanuk12/Trick-cord-Treat-Sniper#readme",
+  "dependencies": {
+    "eris": "^0.13.3"
+  }
 }
