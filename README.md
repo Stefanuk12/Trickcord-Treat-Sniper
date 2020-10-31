@@ -29,3 +29,7 @@ Minimum time to wait until the message is sent.
 
 ### max
 Maximum time to wait until the message is sent.
+
+## SucessRate
+**MUST BE 0-1**
+The success rate, 0.7 would mean it works 70% of the time.

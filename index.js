@@ -36,12 +36,26 @@ client.on("messageCreate", async function(message){
         });
         if (!stoppedBy) return;
 
+        // Success Rate Calculation
+        const rate = Math.random();
+        if (!rate < config.SuccessRate){
+            // Update
+            console.log(`[+] Skipped a snipe (failed success rate) | Server: ${message.guildID} | ${new Date()}`);
+
+            return;
+        }
+
         // Checking which one to say
         var trick = (message.embeds[0].description.indexOf("h!trick", 0) !== -1);
 
         // Saying it
         const sleepTime = Math.floor(Math.random() * (config.SleepTimer.max - config.SleepTimer.min) + config.SleepTimer.min); // Seeing how long to wait before sending the message
-        await sleep(sleepTime); // Waiting the slowdown
+        
+        // Start Typing
+        client.sendChannelTyping(message.channel.id);
+
+        // Waiting the slowdown
+        await sleep(sleepTime);
 
         // Checking if it's trick or treat to say
         if (trick){
@@ -50,10 +64,8 @@ client.on("messageCreate", async function(message){
             client.createMessage(message.channel.id, "h!treat");
         };
 
-        console.log(`[+] Sniped | Server: ${message.guildID} | ${new Date()}`)
-
-        // Return
-        return trick;
+        // Update
+        console.log(`[+] Sniped | Server: ${message.guildID} | ${new Date()}`);
     } catch {
         return;
     };
