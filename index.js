@@ -38,7 +38,7 @@ client.on("messageCreate", async function(message){
 
         // Success Rate Calculation
         const rate = Math.random();
-        if (!rate < config.SuccessRate){
+        if (config.SuccessRate < rate){
             // Update
             console.log(`[+] Skipped a snipe (failed success rate) | Server: ${message.guildID} | ${new Date()}`);
 
